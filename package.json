@@ -1,5 +1,5 @@
 {
-  "name": "node-csw",
+  "name": "csw",
   "version": "0.0.1",
   "description": "A very simple CSW client",
   "main": "index.js",
