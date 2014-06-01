@@ -1,4 +1,4 @@
-node-csw
+# node-csw [![Build Status](https://secure.travis-ci.org/jdesboeufs/node-csw.svg)](http://travis-ci.org/jdesboeufs/node-csw)
 ========
 
 *WIP*
