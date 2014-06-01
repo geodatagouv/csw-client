@@ -4,7 +4,7 @@
   "description": "A very simple CSW client",
   "main": "index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt jshint"
   },
   "repository": {
     "type": "git",
