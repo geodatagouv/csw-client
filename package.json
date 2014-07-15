@@ -1,5 +1,5 @@
 {
-  "name": "csw",
+  "name": "csw-client",
   "version": "0.1.4",
   "description": "A very simple CSW client",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jdesboeufs/node-csw.git"
+    "url": "git://github.com/jdesboeufs/csw-client.git"
   },
   "keywords": [
     "CSW",
@@ -18,9 +18,9 @@
   "author": "Jérôme Desboeufs <jerome.desboeufs@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jdesboeufs/node-csw/issues"
+    "url": "https://github.com/jdesboeufs/csw-client/issues"
   },
-  "homepage": "https://github.com/jdesboeufs/node-csw",
+  "homepage": "https://github.com/jdesboeufs/csw-client",
   "dependencies": {
     "superagent": "^0.17.0",
     "superagent-retry": "~0.3.0",
