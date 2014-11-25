@@ -1,4 +1,4 @@
-# csw-client [![Build Status](https://secure.travis-ci.org/jdesboeufs/csw-client.svg)](http://travis-ci.org/jdesboeufs/csw-client)
+# csw-client [![Build Status](https://secure.travis-ci.org/jdesboeufs/csw-client.svg)](http://travis-ci.org/jdesboeufs/csw-client) [![Dependency Status](https://david-dm.org/jdesboeufs/csw-client.svg)](https://david-dm.org/jdesboeufs/csw-client)
 
 A very simple CSW client
 
