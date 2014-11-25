@@ -6,7 +6,6 @@ A very simple CSW client
 
 * Support of version 2.0.2
 * Support harvesting (w/ Streams API)
-* Embed [ISO-19139 mapping](https://github.com/jdesboeufs/node-iso19139) with harvester
 * Basic support of `GetCapabilities`, `GetRecords` and `GetRecordById`
 
 ## Usage
@@ -26,48 +25,25 @@ var client = csw('http://your-csw-server.tld/csw', options);
 | retry | Optional | If your server is unstable and you want to try again N times | false | 2 |
 | userAgent | Optional | User-Agent used in requests | _Empty_ | CSWBot 1.0 |
 
-#### Harvest a service
+### Harvest a service
 
 ```js
-var harvester = client.harvest({ mapper: 'iso19139' });
+var harvester = client.harvest(options);
 
-harvester.on('error', function(err) {
-    console.trace(err);
-});
-
-harvester.on('start', function(stats) {
-    console.log('Stats: ', stats);
-});
-
-harvester.on('page', function(infos) {
-    console.log('Page: ', infos);
-});
-
-harvester.on('end', function(err, stats) {
-    if (err) {
-        console.trace(err);
-    }
-    if (stats) {
-        console.log(stats);
-    }
-});
-
-harvester.on('record', function(data, stats) {
-
-    // Expose record object after mapping
-    console.log(data.record);
-
-    // Expose raw record (lixmljs element)
-    console.log(data.xml);
-
+harvester.on('data', function(record) {
+   console.log(record.name()); 
 });
 ```
 
+#### Options
+
+| Option name | Type | Description | Default | Example |
+| ---------- | ---------- | ----------- | ---------- | ---------- |
+| step | Optional | Number of records asked by request | 20 | 10 |
+| concurrency | Optional | _For harvesting only:_ Determines how many concurrent `GetRecords` requests can be executed by the Harvester | 3 | 5 |
+
 ## TODO
 
-* Improve [ISO-19139 mapping](https://github.com/jdesboeufs/node-iso19139)
-* Improve API
-* Add Dublin Core mapping
 * Read Capabilities
 * Tests and more tests
 
