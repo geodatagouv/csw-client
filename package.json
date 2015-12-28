@@ -7,6 +7,10 @@
     "lint": "eslint lib/*.js test/*.js *.js",
     "test": "npm run lint"
   },
+  "files": [
+    "lib/",
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/sgmap-inspire/csw-client.git"
