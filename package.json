@@ -4,23 +4,24 @@
   "description": "A very simple CSW client",
   "main": "index.js",
   "scripts": {
-    "test": "grunt jshint"
+    "lint": "eslint lib/*.js test/*.js *.js",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jdesboeufs/csw-client.git"
+    "url": "git://github.com/sgmap-inspire/csw-client.git"
   },
   "keywords": [
     "CSW",
     "OGC",
     "harvester"
   ],
-  "author": "Jérôme Desboeufs <jerome.desboeufs@gmail.com>",
+  "author": "Jérôme Desboeufs <jerome.desboeufs@data.gouv.fr>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jdesboeufs/csw-client/issues"
+    "url": "https://github.com/sgmap-inspire/csw-client/issues"
   },
-  "homepage": "https://github.com/jdesboeufs/csw-client",
+  "homepage": "https://github.com/sgmap-inspire/csw-client",
   "dependencies": {
     "debug": "^2.1.0",
     "libxmljs": "^0.14.0",
@@ -28,7 +29,6 @@
     "superagent": "^1.1.0"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.11.0"
+    "eslint": "^1.10.3"
   }
 }

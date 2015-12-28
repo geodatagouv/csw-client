@@ -1,6 +1,10 @@
-# csw-client [![Build Status](https://secure.travis-ci.org/jdesboeufs/csw-client.svg)](http://travis-ci.org/jdesboeufs/csw-client) [![Dependency Status](https://david-dm.org/jdesboeufs/csw-client.svg)](https://david-dm.org/jdesboeufs/csw-client)
-
+# csw-client
 A very simple CSW client
+
+[![npm version](https://img.shields.io/npm/v/csw-client.svg)](https://www.npmjs.com/package/csw-client)
+[![Circle CI](https://circleci.com/gh/sgmap-inspire/csw-client/tree/master.svg?style=shield)](https://circleci.com/gh/sgmap-inspire/csw-client/tree/master)
+[![Coverage Status](https://coveralls.io/repos/sgmap-inspire/csw-client/badge.svg?branch=master&service=github)](https://coveralls.io/github/sgmap-inspire/csw-client?branch=master)
+[![Dependency Status](https://david-dm.org/sgmap-inspire/csw-client.svg)](https://david-dm.org/sgmap-inspire/csw-client)
 
 ## Features
 
@@ -31,7 +35,7 @@ var client = csw('http://your-csw-server.tld/csw', options);
 var harvester = client.harvest(options);
 
 harvester.on('data', function(record) {
-   console.log(record.name()); 
+   console.log(record.name());
 });
 ```
 
@@ -46,13 +50,3 @@ harvester.on('data', function(record) {
 
 * Read Capabilities
 * Tests and more tests
-
-## About
-
-### License
-
-MIT
-
-### Author
-
-Jérôme Desboeufs ([@jdesboeufs](https://twitter.com/jdesboeufs))
