@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint lib/*.js test/*.js *.js",
-    "test": "npm run lint"
+    "test-unit": "istanbul cover _mocha",
+    "test": "npm run lint && npm run test-unit"
   },
   "files": [
     "lib/",
@@ -28,11 +29,16 @@
   "homepage": "https://github.com/sgmap-inspire/csw-client",
   "dependencies": {
     "debug": "^2.1.0",
-    "inspire-parser": "^0.2.0",
+    "inspire-parser": "^0.4.0",
     "lodash": "^3.7.0",
-    "superagent": "^1.1.0"
+    "request": "^2.67.0",
+    "stringstream": "0.0.5"
   },
   "devDependencies": {
-    "eslint": "^1.10.3"
+    "eslint": "^1.10.3",
+    "expect.js": "^0.3.1",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4",
+    "nock": "^3.6.0"
   }
 }
