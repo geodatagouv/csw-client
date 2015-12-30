@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csw:GetRecordsResponse xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 http://schemas.opengis.net/csw/2.0.2/CSW-discovery.xsd">
+  <csw:SearchStatus timestamp="2015-12-30T17:48:12" />
+  <csw:SearchResults numberOfRecordsMatched="965" numberOfRecordsReturned="10" elementSet="full" nextRecord="11">
+    <csw:Record xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ows="http://www.opengis.net/ows" xmlns:dct="http://purl.org/dc/terms/" xmlns:geonet="http://www.fao.org/geonetwork">
+      <dc:identifier>22c47096-64da-44e8-a04e-58f9779c6995</dc:identifier>
+      <dc:date>2014-09-11T09:32:18+02:00</dc:date>
+      <dc:title>L'eau et les milieux aquatiques en Picardie : Service de téléchargement simple (ATOM)</dc:title>
+      <dc:type>service</dc:type>
+      <dc:subject>infoProductAccessService</dc:subject>
+      <dc:format>ESRI Shapefile</dc:format>
+      <dct:abstract />
+      <dc:description />
+      <dc:rights>otherRestrictions</dc:rights>
+      <dc:format>ESRI Shapefile</dc:format>
+      <dc:URI>http://ws.carmencarto.fr/ATOM/27/eaux_et_milieux_aquatiques_en_picardie.atom</dc:URI>
+    </csw:Record>
+    <csw:Record xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ows="http://www.opengis.net/ows" xmlns:dct="http://purl.org/dc/terms/" xmlns:geonet="http://www.fao.org/geonetwork">
+      <dc:identifier>67f8c692-d211-470f-b399-171aaafd80eb</dc:identifier>
+      <dc:date>2015-01-22T11:39:26</dc:date>
+      <dc:title>États quantitatif et chimique 2010-2011 des masses d'eau souterraines - partie picardie du bassin Artois-Picardie</dc:title>
+      <dc:type>dataset</dc:type>
+      <dc:subject>Hydrographie</dc:subject>
+      <dc:subject>environment</dc:subject>
+      <dc:format>TAB</dc:format>
+      <dct:abstract>Cette couche indique les états quantitatif et chimique des masses d'eau souterraines, pour les années 2010-2011, pour la partie picarde du bassin Artois-Picardie</dct:abstract>
+      <dc:description>Cette couche indique les états quantitatif et chimique des masses d'eau souterraines, pour les années 2010-2011, pour la partie picarde du bassin Artois-Picardie</dc:description>
+      <dc:rights>otherRestrictions</dc:rights>
+      <dc:language>fre</dc:language>
+      <dc:source>Données provenant de l'état des lieux du SDAGE Artois-Picardie 2016-2021</dc:source>
+      <dc:format>TAB</dc:format>
+      <ows:BoundingBox crs="urn:ogc:def:crs:EPSG::RGF93 / Lambert-93">
+        <ows:LowerCorner>4.27 48.67</ows:LowerCorner>
+        <ows:UpperCorner>1.42 50.53</ows:UpperCorner>
+      </ows:BoundingBox>
+      <ows:BoundingBox crs="urn:ogc:def:crs:EPSG::RGF93 / Lambert-93">
+        <ows:LowerCorner>4.27 48.67</ows:LowerCorner>
+        <ows:UpperCorner>1.42 50.53</ows:UpperCorner>
+      </ows:BoundingBox>
+      <dc:URI protocol="WWW:LINK-1.0-http--link" name="L'eau et les milieux aquatiques en Picardie">http://metadata.carmen.developpement-durable.gouv.fr/geosource-27/srv/fre/metadata.show?uuid=67f8c692-d211-470f-b399-171aaafd80eb</dc:URI>
+      <dc:URI protocol="OGC:WMS-1.1.1-http-get-map" name="L'eau et les milieux aquatiques en Picardie">http://metadata.carmen.developpement-durable.gouv.fr/geosource-27/srv/fre/metadata.show?uuid=67f8c692-d211-470f-b399-171aaafd80eb</dc:URI>
+      <dc:URI protocol="image/png" name="thumbnail">resources.get?id=16557&amp;fname=Etat_quantitatif_chimique_SOUT_AP_2010_2011_s.png&amp;access=public</dc:URI>
+      <dc:URI name="large_thumbnail">resources.get?id=16557&amp;fname=Etat_quantitatif_chimique_SOUT_AP_2010_2011.JPG&amp;access=public</dc:URI>
+    </csw:Record>
+    <csw:Record xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ows="http://www.opengis.net/ows" xmlns:dct="http://purl.org/dc/terms/" xmlns:geonet="http://www.fao.org/geonetwork">
+      <dc:identifier>9a2cf884-f2a8-47fb-ba88-a3cca2cd9f4c</dc:identifier>
+      <dc:date>2015-01-14T11:46:10</dc:date>
+      <dc:title>TRI d'ABBEVILLE.Données produites par le SIG Directive inondation du territoire à risque d’inondation de la DREAL Picardie.</dc:title>
+      <dc:type>series</dc:type>
+      <dc:subject>Zones à risque naturel</dc:subject>
+      <dc:subject>Zones à risque naturel</dc:subject>
+      <dc:subject>inlandWaters</dc:subject>
+      <dc:format>Mapinfo TAB</dc:format>
+      <dct:abstract>Série de données géographiques produites par le SIG Directive inondation du territoire à risque important d’inondation (TRI) d'ABBEVILLE et cartographiées aux fins de rapportage pour la directive européenne sur les inondations.La Directive européenne 2007/60/CE du 23 octobre 2007 relative à l'évaluation et à la gestion des risques d'inondation (JOUE L 288, 06-11-2007, p.27) influence la stratégie de prévention des inondations en Europe. Elle impose la production de plan de gestion des risques d’inondations qui vise à réduire les conséquences négatives des inondations sur la santé humaine, l’environnement, le patrimoine culturel et l’activité économique.Les objectifs et exigences de réalisation sont donnés par la loi du 12 juillet 2010 portant engagement national pour l’environnement (LENE) et le décret du 2 mars 2011. Dans ce cadre, l'objectif premier de la cartographie des surfaces inondables et des risques d'inondation pour les TRI est de contribuer, en homogénéisant et en objectivant la connaissance de l'exposition des enjeux aux inondations, à l’élaboration des plans de gestion des risques d’inondation (PGRI).Cette série de données sert à produire les cartes de surfaces inondables et la carte de risques d’inondation qui représentent respectivement les aléas d’inondation et les enjeux exposés à une échelle appropriée. Leur objectif est d’apporter des éléments quantitatifs permettant d’évaluer plus finement la vulnérabilité d’un territoire pour les trois niveaux de probabilité d’inondation (fort, moyen, faible).</dct:abstract>
+      <dc:description>Série de données géographiques produites par le SIG Directive inondation du territoire à risque important d’inondation (TRI) d'ABBEVILLE et cartographiées aux fins de rapportage pour la directive européenne sur les inondations.La Directive européenne 2007/60/CE du 23 octobre 2007 relative à l'évaluation et à la gestion des risques d'inondation (JOUE L 288, 06-11-2007, p.27) influence la stratégie de prévention des inondations en Europe. Elle impose la production de plan de gestion des risques d’inondations qui vise à réduire les conséquences négatives des inondations sur la santé humaine, l’environnement, le patrimoine culturel et l’activité économique.Les objectifs et exigences de réalisation sont donnés par la loi du 12 juillet 2010 portant engagement national pour l’environnement (LENE) et le décret du 2 mars 2011. Dans ce cadre, l'objectif premier de la cartographie des surfaces inondables et des risques d'inondation pour les TRI est de contribuer, en homogénéisant et en objectivant la connaissance de l'exposition des enjeux aux inondations, à l’élaboration des plans de gestion des risques d’inondation (PGRI).Cette série de données sert à produire les cartes de surfaces inondables et la carte de risques d’inondation qui représentent respectivement les aléas d’inondation et les enjeux exposés à une échelle appropriée. Leur objectif est d’apporter des éléments quantitatifs permettant d’évaluer plus finement la vulnérabilité d’un territoire pour les trois niveaux de probabilité d’inondation (fort, moyen, faible).</dc:description>
+      <dc:rights>intellectualPropertyRights</dc:rights>
+      <dc:rights>copyright</dc:rights>
+      <dc:language>fre</dc:language>
+      <dc:source>-- Généalogie de la série de données --</dc:source>
+      <dc:format>Mapinfo TAB</dc:format>
+      <ows:BoundingBox crs="urn:ogc:def:crs:EPSG:6.6:4326">
+        <ows:LowerCorner>1.92 50.05</ows:LowerCorner>
+        <ows:UpperCorner>1.74 50.17</ows:UpperCorner>
+      </ows:BoundingBox>
+      <dc:URI protocol="WWW:LINK-1.0-http--link" name="Cliquer sur ce lien pour consulter la carte">http://carmen.developpement-durable.gouv.fr/27/Cartographie_DI_ABBEVILLE.map</dc:URI>
+      <dc:URI protocol="image/png" name="thumbnail">resources.get?id=28126&amp;fname=Capture_TRI_ABBEVILLE_GEOSOURCE_s.png&amp;access=public</dc:URI>
+      <dc:URI name="large_thumbnail">resources.get?id=28126&amp;fname=Capture_TRI_ABBEVILLE_GEOSOURCE.JPG&amp;access=public</dc:URI>
+    </csw:Record>
+    <csw:Record xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ows="http://www.opengis.net/ows" xmlns:dct="http://purl.org/dc/terms/" xmlns:geonet="http://www.fao.org/geonetwork">
+      <dc:identifier>b402d0bd-06de-4e8f-8b61-3ff2a9a8b046</dc:identifier>
+      <dc:date>2014-09-26T17:20:02+02:00</dc:date>
+      <dc:title>Sites et paysages de Picardie  : Service de téléchargement simple (ATOM)</dc:title>
+      <dc:type>service</dc:type>
+      <dc:subject>infoProductAccessService</dc:subject>
+      <dc:format>ESRI Shapefile</dc:format>
+      <dct:abstract />
+      <dc:description />
+      <dc:rights>otherRestrictions</dc:rights>
+      <dc:format>ESRI Shapefile</dc:format>
+      <dc:URI>http://ws.carmen.developpement-durable.gouv.fr/ATOM/27/sites_et_paysages_de_picardie.atom</dc:URI>
+    </csw:Record>
+    <csw:Record xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ows="http://www.opengis.net/ows" xmlns:dct="http://purl.org/dc/terms/" xmlns:geonet="http://www.fao.org/geonetwork">
+      <dc:identifier>7849a0e1-5ca8-4e77-b563-bbb7b33460dd</dc:identifier>
+      <dc:date>2015-09-09T15:12:06+02:00</dc:date>
+      <dc:title>Le SRE en Picardie : Service de téléchargement simple (ATOM)</dc:title>
+      <dc:type>service</dc:type>
+      <dc:subject>infoProductAccessService</dc:subject>
+      <dc:format>ATOM</dc:format>
+      <dct:abstract>###Paramètre "résumé" dans la fonction "Services INSPIRE"</dct:abstract>
+      <dc:description>###Paramètre "résumé" dans la fonction "Services INSPIRE"</dc:description>
+      <dc:rights>otherRestrictions</dc:rights>
+      <dc:format>ATOM</dc:format>
+      <dc:URI>http://ws.carmen.developpement-durable.gouv.fr/ATOM/27/Le_SRE_en_Picardie.atom</dc:URI>
+    </csw:Record>
+    <csw:Record xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ows="http://www.opengis.net/ows" xmlns:dct="http://purl.org/dc/terms/" xmlns:geonet="http://www.fao.org/geonetwork">
+      <dc:identifier>14f52ffd-f899-4394-9270-0f5a0755fc13</dc:identifier>
+      <dc:date>2015-09-15T15:53:59+02:00</dc:date>
+      <dc:title>Natura 2000 Picardie : Service de téléchargement simple (ATOM)</dc:title>
+      <dc:type>service</dc:type>
+      <dc:subject>infoProductAccessService</dc:subject>
+      <dc:format>ESRI Shapefile</dc:format>
+      <dct:abstract />
+      <dc:description />
+      <dc:rights>otherRestrictions</dc:rights>
+      <dc:format>ESRI Shapefile</dc:format>
+      <dc:URI>http://ws.carmen.developpement-durable.gouv.fr/ATOM/27/Natura2000.atom</dc:URI>
+    </csw:Record>
+    <csw:Record xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ows="http://www.opengis.net/ows" xmlns:dct="http://purl.org/dc/terms/" xmlns:geonet="http://www.fao.org/geonetwork">
+      <dc:identifier>66e32f01-aceb-4bdd-a21b-fb4b2382c7b4</dc:identifier>
+      <dc:date>2014-05-06T15:06:40</dc:date>
+      <dc:title>TRI de COMPIEGNE
+Données produites par le SIG Directive inondation du territoire à risque d’inondation de la DREAL Picardie.</dc:title>
+      <dc:type>series</dc:type>
+      <dc:subject>Zones à risque naturel</dc:subject>
+      <dc:subject>Inondation</dc:subject>
+      <dc:subject>inlandWaters</dc:subject>
+      <dc:format>Mapinfo TAB</dc:format>
+      <dct:abstract>Série de données géographiques produites par le SIG Directive inondation du territoire à risque important d’inondation (TRI) de COMPIEGNE et cartographiées aux fins de rapportage pour la directive européenne sur les inondations.La Directive européenne 2007/60/CE du 23 octobre 2007 relative à l'évaluation et à la gestion des risques d'inondation (JOUE L 288, 06-11-2007, p.27) influence la stratégie de prévention des inondations en Europe. Elle impose la production de plan de gestion des risques d’inondations qui vise à réduire les conséquences négatives des inondations sur la santé humaine, l’environnement, le patrimoine culturel et l’activité économique.Les objectifs et exigences de réalisation sont donnés par la loi du 12 juillet 2010 portant engagement national pour l’environnement (LENE) et le décret du 2 mars 2011. Dans ce cadre, l'objectif premier de la cartographie des surfaces inondables et des risques d'inondation pour les TRI est de contribuer, en homogénéisant et en objectivant la connaissance de l'exposition des enjeux aux inondations, à l’élaboration des plans de gestion des risques d’inondation (PGRI).Cette série de données sert à produire les cartes de surfaces inondables et la carte de risques d’inondation qui représentent respectivement les aléas d’inondation et les enjeux exposés à une échelle appropriée. Leur objectif est d’apporter des éléments quantitatifs permettant d’évaluer plus finement la vulnérabilité d’un territoire pour les trois niveaux de probabilité d’inondation (fort, moyen, faible).</dct:abstract>
+      <dc:description>Série de données géographiques produites par le SIG Directive inondation du territoire à risque important d’inondation (TRI) de COMPIEGNE et cartographiées aux fins de rapportage pour la directive européenne sur les inondations.La Directive européenne 2007/60/CE du 23 octobre 2007 relative à l'évaluation et à la gestion des risques d'inondation (JOUE L 288, 06-11-2007, p.27) influence la stratégie de prévention des inondations en Europe. Elle impose la production de plan de gestion des risques d’inondations qui vise à réduire les conséquences négatives des inondations sur la santé humaine, l’environnement, le patrimoine culturel et l’activité économique.Les objectifs et exigences de réalisation sont donnés par la loi du 12 juillet 2010 portant engagement national pour l’environnement (LENE) et le décret du 2 mars 2011. Dans ce cadre, l'objectif premier de la cartographie des surfaces inondables et des risques d'inondation pour les TRI est de contribuer, en homogénéisant et en objectivant la connaissance de l'exposition des enjeux aux inondations, à l’élaboration des plans de gestion des risques d’inondation (PGRI).Cette série de données sert à produire les cartes de surfaces inondables et la carte de risques d’inondation qui représentent respectivement les aléas d’inondation et les enjeux exposés à une échelle appropriée. Leur objectif est d’apporter des éléments quantitatifs permettant d’évaluer plus finement la vulnérabilité d’un territoire pour les trois niveaux de probabilité d’inondation (fort, moyen, faible).</dc:description>
+      <dc:rights>intellectualPropertyRights</dc:rights>
+      <dc:rights>copyright</dc:rights>
+      <dc:language>fre</dc:language>
+      <dc:source>Cette série de données résulte du processus de cartographie des surfacesinondables et des risques d’inondation sur le TRI de COMPIEGNE, Elle comporte des données géographiques se rapportant à chaque scénariod’inondation :• les surfaces inondables,• les ouvrages de protection contre les inondations,• les zones de sur-aléa pouvant être provoquées par la rupture d’unouvrage de protection,• les zones soustraites à l’inondation par la présence de l’ouvrage deprotection,• les enjeux sociaux (nombre d’habitants, nombre d’emplois) mesurés pourchaque unité territoriale de rapportage (éventuellement le quartier,obligatoirement la commune et le TRI),• les enjeux relatifs à des biens et services requis par la directiveinondation.Des informations de généalogie détaillées sont fournies dans le rapportaccompagnant les cartes et le SIG Directive inondation. Ces informationsexpliquent les choix faits sur les données et les méthodes de production.Adresse URL du rapport d’accompagnement :http://www.picardie.developpement-durable.gouv.fr/IMG/pdf/Rapport_Compiegne_dec2013_2.pdf</dc:source>
+      <dc:format>Mapinfo TAB</dc:format>
+      <ows:BoundingBox crs="urn:ogc:def:crs:EPSG:6.6:4326">
+        <ows:LowerCorner>2.98 49.27</ows:LowerCorner>
+        <ows:UpperCorner>2.63 49.5</ows:UpperCorner>
+      </ows:BoundingBox>
+      <dc:URI protocol="WWW:LINK-1.0-http--link" name="Cliquer sur ce lien pour consulter la carte">http://carmen.developpement-durable.gouv.fr/27/Cartographie_DI_COMPIEGNE.map</dc:URI>
+      <dc:URI protocol="WWW:DOWNLOAD-1.0-http--download">http://www.picardie.developpement-durable.gouv.fr/IMG/pdf/Rapport_Compiegne_dec2013_2.pdf</dc:URI>
+      <dc:URI protocol="image/png" name="thumbnail">resources.get?id=18278&amp;fname=Capture_TRI_COMPIEGNE_GEOSOURCE_s.png&amp;access=public</dc:URI>
+      <dc:URI name="large_thumbnail">resources.get?id=18278&amp;fname=Capture_TRI_COMPIEGNE_GEOSOURCE.JPG&amp;access=public</dc:URI>
+    </csw:Record>
+    <csw:Record xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ows="http://www.opengis.net/ows" xmlns:dct="http://purl.org/dc/terms/" xmlns:geonet="http://www.fao.org/geonetwork">
+      <dc:identifier>cc9b5991-1525-4895-a1f4-67ed77942cf1</dc:identifier>
+      <dc:date>2015-09-01T14:27:14+02:00</dc:date>
+      <dc:title>Atlas piézométrique de Picardie : Service de visualisation cartographique (WMS)</dc:title>
+      <dc:type>service</dc:type>
+      <dc:subject>infoMapAccessService</dc:subject>
+      <dc:format>WMS</dc:format>
+      <dct:abstract>###Paramètre "résumé" dans la fonction "Services INSPIRE"</dct:abstract>
+      <dc:description>###Paramètre "résumé" dans la fonction "Services INSPIRE"</dc:description>
+      <dc:rights>otherRestrictions</dc:rights>
+      <dc:format>WMS</dc:format>
+      <dc:URI>http://ws.carmencarto.fr/WMS/198/AtlasPicardie?</dc:URI>
+    </csw:Record>
+    <csw:Record xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ows="http://www.opengis.net/ows" xmlns:dct="http://purl.org/dc/terms/" xmlns:geonet="http://www.fao.org/geonetwork">
+      <dc:identifier>2e86c616-8f32-43c0-86ea-6391db8c534f</dc:identifier>
+      <dc:date>2014-05-06T15:23:48</dc:date>
+      <dc:title>TRI de CHAUNY-TERGNIER-LA FERE.
+Données produites par le SIG Directive inondation du territoire à risque d’inondation de la DREAL Picardie.</dc:title>
+      <dc:type>series</dc:type>
+      <dc:subject>Zones à risque naturel</dc:subject>
+      <dc:subject>Inondation</dc:subject>
+      <dc:subject>inlandWaters</dc:subject>
+      <dc:format>Mapinfo TAB</dc:format>
+      <dct:abstract>Série de données géographiques produites par le SIG Directive inondation du territoire à risque important d’inondation (TRI) de CHAUNY-TERGNIER-LA FERE et cartographiées aux fins de rapportage pour la directive européenne sur les inondations.La Directive européenne 2007/60/CE du 23 octobre 2007 relative à l'évaluation et à la gestion des risques d'inondation (JOUE L 288, 06-11-2007, p.27) influence la stratégie de prévention des inondations en Europe. Elle impose la production de plan de gestion des risques d’inondations qui vise à réduire les conséquences négatives des inondations sur la santé humaine, l’environnement, le patrimoine culturel et l’activité économique.Les objectifs et exigences de réalisation sont donnés par la loi du 12 juillet 2010 portant engagement national pour l’environnement (LENE) et le décret du 2 mars 2011. Dans ce cadre, l'objectif premier de la cartographie des surfaces inondables et des risques d'inondation pour les TRI est de contribuer, en homogénéisant et en objectivant la connaissance de l'exposition des enjeux aux inondations, à l’élaboration des plans de gestion des risques d’inondation (PGRI).Cette série de données sert à produire les cartes de surfaces inondables et la carte de risques d’inondation qui représentent respectivement les aléas d’inondation et les enjeux exposés à une échelle appropriée. Leur objectif est d’apporter des éléments quantitatifs permettant d’évaluer plus finement la vulnérabilité d’un territoire pour les trois niveaux de probabilité d’inondation (fort, moyen, faible).</dct:abstract>
+      <dc:description>Série de données géographiques produites par le SIG Directive inondation du territoire à risque important d’inondation (TRI) de CHAUNY-TERGNIER-LA FERE et cartographiées aux fins de rapportage pour la directive européenne sur les inondations.La Directive européenne 2007/60/CE du 23 octobre 2007 relative à l'évaluation et à la gestion des risques d'inondation (JOUE L 288, 06-11-2007, p.27) influence la stratégie de prévention des inondations en Europe. Elle impose la production de plan de gestion des risques d’inondations qui vise à réduire les conséquences négatives des inondations sur la santé humaine, l’environnement, le patrimoine culturel et l’activité économique.Les objectifs et exigences de réalisation sont donnés par la loi du 12 juillet 2010 portant engagement national pour l’environnement (LENE) et le décret du 2 mars 2011. Dans ce cadre, l'objectif premier de la cartographie des surfaces inondables et des risques d'inondation pour les TRI est de contribuer, en homogénéisant et en objectivant la connaissance de l'exposition des enjeux aux inondations, à l’élaboration des plans de gestion des risques d’inondation (PGRI).Cette série de données sert à produire les cartes de surfaces inondables et la carte de risques d’inondation qui représentent respectivement les aléas d’inondation et les enjeux exposés à une échelle appropriée. Leur objectif est d’apporter des éléments quantitatifs permettant d’évaluer plus finement la vulnérabilité d’un territoire pour les trois niveaux de probabilité d’inondation (fort, moyen, faible).</dc:description>
+      <dc:rights>intellectualPropertyRights</dc:rights>
+      <dc:rights>copyright</dc:rights>
+      <dc:language>fre</dc:language>
+      <dc:source>Cette série de données résulte du processus de cartographie des surfacesinondables et des risques d’inondation sur le TRI de CHAUNY-TERGNIER-LA FERE, Elle comporte des données géographiques se rapportant à chaque scénariod’inondation :• les surfaces inondables,• les ouvrages de protection contre les inondations,• les zones de sur-aléa pouvant être provoquées par la rupture d’unouvrage de protection,• les zones soustraites à l’inondation par la présence de l’ouvrage deprotection,• les enjeux sociaux (nombre d’habitants, nombre d’emplois) mesurés pourchaque unité territoriale de rapportage (éventuellement le quartier,obligatoirement la commune et le TRI),• les enjeux relatifs à des biens et services requis par la directiveinondation.Des informations de généalogie détaillées sont fournies dans le rapportaccompagnant les cartes et le SIG Directive inondation. Ces informationsexpliquent les choix faits sur les données et les méthodes de production.Adresse URL du rapport d’accompagnement :http://www.picardie.developpement-durable.gouv.fr/IMG/pdf/Rapport_Chauny_dec2013_2.pdf</dc:source>
+      <dc:format>Mapinfo TAB</dc:format>
+      <ows:BoundingBox crs="urn:ogc:def:crs:EPSG:6.6:4326">
+        <ows:LowerCorner>3.43 49.54</ows:LowerCorner>
+        <ows:UpperCorner>3.16 49.72</ows:UpperCorner>
+      </ows:BoundingBox>
+      <dc:URI protocol="WWW:LINK-1.0-http--link" name="Cliquer sur ce lien pour consulter la carte">http://carmen.developpement-durable.gouv.fr/27/Cartographie_DI_CHAUNY.map</dc:URI>
+      <dc:URI protocol="WWW:DOWNLOAD-1.0-http--download">http://www.picardie.developpement-durable.gouv.fr/IMG/pdf/Rapport_Chauny_dec2013_2.pdf</dc:URI>
+      <dc:URI protocol="image/png" name="thumbnail">resources.get?id=16691&amp;fname=Capture_TRI_CHAUNY_GEOSOURCE_s.png&amp;access=public</dc:URI>
+      <dc:URI name="large_thumbnail">resources.get?id=16691&amp;fname=Capture_TRI_CHAUNY_GEOSOURCE.JPG&amp;access=public</dc:URI>
+    </csw:Record>
+    <csw:Record xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ows="http://www.opengis.net/ows" xmlns:dct="http://purl.org/dc/terms/" xmlns:geonet="http://www.fao.org/geonetwork">
+      <dc:identifier>3654a51a-476b-4e45-87ee-ceecbe1fa498</dc:identifier>
+      <dc:date>2014-09-26T17:20:00+02:00</dc:date>
+      <dc:title>Sites et paysages de Picardie  : Service de visualisation cartographique (WMS)</dc:title>
+      <dc:type>service</dc:type>
+      <dc:subject>infoMapAccessService</dc:subject>
+      <dct:abstract />
+      <dc:description />
+      <dc:rights>otherRestrictions</dc:rights>
+      <dc:URI>http://ws.carmen.developpement-durable.gouv.fr/WMS/27/sites_et_paysages_de_picardie?</dc:URI>
+    </csw:Record>
+  </csw:SearchResults>
+</csw:GetRecordsResponse>
+

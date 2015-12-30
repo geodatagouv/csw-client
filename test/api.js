@@ -115,3 +115,72 @@ describe('#capabilities', function () {
         });
     });
 });
+
+describe('#records', function () {
+    describe('When server responds with valid result', function () {
+        const content = fs.readFileSync(__dirname + '/fixtures/records-results-basic.xml', 'utf8');
+        function hiNock() {
+            nock('http://test-client')
+                .get('/csw')
+                .query({
+                    service: 'CSW',
+                    version: '2.0.2',
+                    request: 'GetRecords',
+                    resultType: 'results',
+                    elementSetName: 'full',
+                    typeNames: 'csw:Record',
+                    maxRecords: 10,
+                })
+                .reply(200, content, { 'Content-Type': 'application/xml;charset=UTF-8' });
+        }
+
+        it('getRecords() should return a stream with valid content', function (done) {
+            hiNock();
+            collectStream(csw('http://test-client/csw').getRecords(), function (err, response) {
+                expect(err).to.be(null);
+                expect(response).to.be.eql(content);
+                done();
+            });
+        });
+
+        it('records() should return records', function (done) {
+            hiNock();
+            csw('http://test-client/csw').records((err, result) => {
+                expect(err).to.be(null);
+                expect(result.returned).to.be(10);
+                expect(result.matched).to.be(965);
+                expect(result.records.length).to.be(10);
+                done();
+            });
+        });
+    });
+});
+
+describe('#count', function () {
+    describe('When server responds with valid result', function () {
+        const content = fs.readFileSync(__dirname + '/fixtures/records-hits-basic.xml', 'utf8');
+        function hiNock() {
+            nock('http://test-client')
+                .get('/csw')
+                .query({
+                    service: 'CSW',
+                    version: '2.0.2',
+                    request: 'GetRecords',
+                    resultType: 'hits',
+                    elementSetName: 'full',
+                    typeNames: 'csw:Record',
+                    maxRecords: 10,
+                })
+                .reply(200, content, { 'Content-Type': 'application/xml;charset=UTF-8' });
+        }
+
+        it('count() should return records count', function (done) {
+            hiNock();
+            csw('http://test-client/csw').count((err, count) => {
+                expect(err).to.be(null);
+                expect(count).to.be(965);
+                done();
+            });
+        });
+    });
+});
