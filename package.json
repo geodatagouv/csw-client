@@ -39,7 +39,7 @@
     "expect.js": "^0.3.1",
     "istanbul": "^0.4.1",
     "mocha": "^2.3.4",
-    "nock": "^3.6.0"
+    "nock": "^5.2.1"
   },
   "engines": {
     "node": ">= 4.0"
