@@ -29,7 +29,7 @@
   "homepage": "https://github.com/sgmap-inspire/csw-client",
   "dependencies": {
     "debug": "^2.1.0",
-    "inspire-parser": "^0.4.0",
+    "inspire-parser": "^0.5.0",
     "lodash": "^3.7.0",
     "request": "^2.67.0",
     "stringstream": "0.0.5"
