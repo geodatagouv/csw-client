@@ -8,45 +8,66 @@ A very simple CSW client
 
 ## Features
 
-* Support of version 2.0.2
-* Support harvesting (w/ Streams API)
-* Basic support of `GetCapabilities`, `GetRecords` and `GetRecordById`
+* Fetch capabilities
+* Fetch records
+* Harvest (w/ Stream API)
+* Support ISO 19139 (including Inspire profile)
+* Support Dublin Core
+
+## Installation
+
+```js
+npm install csw-client
+```
 
 ## Usage
 
 ### Create a client
 
 ```js
-var csw = require('csw-client');
-var client = csw('http://your-csw-server.tld/csw', options);
+const csw = require('csw-client');
+const client = csw('http://your-csw-server.tld/csw', options);
 ```
 
 #### Options
 
-| Option name | Type | Description | Default | Example |
-| ---------- | ---------- | ----------- | ---------- | ---------- |
-| maxSockets | Optional | Determines how many concurrent sockets can be opened for the client | 5 | 10 |
-| retry | Optional | If your server is unstable and you want to try again N times | false | 2 |
-| userAgent | Optional | User-Agent used in requests | _Empty_ | CSWBot 1.0 |
+| Name | Description | Type | Default value |
+| ---- | ----------- | ---- | ------------- |
+| `userAgent`    | User-Agent string you want to use in requests   | `string` | `"CSWBot"` |
+| `gzip`         | enable compression | `boolean` | `true` |
+| `timeout`      | requests will fail after X seconds | `integer` | _disabled_ |
+| `agentOptions` | options to pass to [http.Agent](https://nodejs.org/api/http.html#http_new_agent_options) (or https) constructor | `object` | _none_ |
+| `appendQs`     | query string to append to each request (key/value object) | `object` | _none_ |
+| `encodeQs`     | encode query string | `boolean` | `true` |
 
-### Harvest a service
+### Harvest
+
+#### Stream API
 
 ```js
-var harvester = client.harvest(options);
+client.harvest(options).pipe(outputStream);
+```
 
-harvester.on('data', function(record) {
-   console.log(record.name());
-});
+#### Alternative
+
+```js
+client.harvest(options)
+    .on('record', record => console.log(record.type))
+    .on('error', err => console.error(err))
+    .on('end', () => console.log('Finished!'))
+    .resume();
 ```
 
 #### Options
 
-| Option name | Type | Description | Default | Example |
-| ---------- | ---------- | ----------- | ---------- | ---------- |
-| step | Optional | Number of records asked by request | 20 | 10 |
-| concurrency | Optional | _For harvesting only:_ Determines how many concurrent `GetRecords` requests can be executed by the Harvester | 3 | 5 |
+| Name | Description | Type | Default value |
+| ---- | ----------- | ---- | ------------- |
+| `step`      | number of records asked by `GetRecords` request | `integer` | `20` |
+| `concurrency` | number of concurrent `GetRecords` requests | `integer` | `5` |
 
-## TODO
+#### Events
 
-* Read Capabilities
-* Tests and more tests
+| Name | Description | Properties |
+| ---- | ----------- | ---------- |
+| `record` | a new record is found | `type`: record type<br>`body`: [parsed value](https://github.com/sgmap-inspire/parsers) |
+| `end` | harvesting has ended | _none_ |
