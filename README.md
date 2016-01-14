@@ -70,4 +70,6 @@ client.harvest(options)
 | Name | Description | Properties |
 | ---- | ----------- | ---------- |
 | `record` | a new record is found | `type`: record type<br>`body`: [parsed value](https://github.com/sgmap-inspire/parsers) |
+| `started` | harvesting has started | _none_ |
+| `failed` | harvesting has failed | _none_ |
 | `end` | harvesting has ended | _none_ |
