@@ -2,12 +2,12 @@
 const nock = require('nock');
 const fs = require('fs');
 const expect = require('expect.js');
-const _ = require('lodash');
+const { once } = require('lodash');
 const csw = require('../');
 const stringstream = require('stringstream');
 
 function collectStream(readable, done) {
-    const doneOnce = _.once(done);
+    const doneOnce = once(done);
     const buffer = [];
     readable
         .on('error', err => doneOnce(err))
