@@ -6,6 +6,11 @@ A very simple CSW client
 [![Coverage Status](https://coveralls.io/repos/sgmap-inspire/csw-client/badge.svg?branch=master&service=github)](https://coveralls.io/github/sgmap-inspire/csw-client?branch=master)
 [![Dependency Status](https://david-dm.org/sgmap-inspire/csw-client.svg)](https://david-dm.org/sgmap-inspire/csw-client)
 
+## Prerequisite
+
+* [Node.js](https://nodejs.org) >= 6.0
+* OR [Babel](https://babeljs.io/) for older Node.js versions + browser
+
 ## Features
 
 * Fetch capabilities
