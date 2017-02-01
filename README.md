@@ -69,6 +69,7 @@ client.harvest(options)
 | ---- | ----------- | ---- | ------------- |
 | `step`      | number of records asked by `GetRecords` request | `integer` | `20` |
 | `concurrency` | number of concurrent `GetRecords` requests | `integer` | `5` |
+| `omitElementSetName` | omit this parameter in requests | `boolean` | `false` |
 
 #### Events
 
