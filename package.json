@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/sgmap-inspire/csw-client",
   "dependencies": {
+    "bluebird": "^3.4.7",
     "debug": "^2.1.0",
     "inspire-parser": "^0.7.0",
     "lodash": "^4.0.0",
