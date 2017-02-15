@@ -1,59 +1,59 @@
 /* eslint-env mocha */
 const nock = require('nock');
 const fs = require('fs');
-const expect = require('expect.js');
-const { once } = require('lodash');
 const csw = require('../');
 const stringstream = require('stringstream');
+const Promise = require('bluebird');
 
-function collectStream(readable, done) {
-    const doneOnce = once(done);
-    const buffer = [];
-    readable
-        .on('error', err => doneOnce(err))
-        .pipe(stringstream('utf8'))
-            .on('error', err => doneOnce(err))
-            .on('data', chunk => buffer.push(chunk))
-            .on('end', () => doneOnce(null, buffer.join()));
+const chai = require('chai');
+const expect = chai.expect;
+const chaiAsPromised = require('chai-as-promised');
+chai.use(chaiAsPromised);
+
+function collectStream(readablePromise) {
+    return readablePromise
+        .then(readable => new Promise((resolve, reject) => {
+            const buffer = [];
+            readable
+                .on('error', reject)
+                .pipe(stringstream('utf8'))
+                    .on('error', reject)
+                    .on('data', chunk => buffer.push(chunk))
+                    .on('end', () => resolve(buffer.join()));
+        }));
 }
 
 describe('#constructor', function () {
     describe('New client without url', function () {
         it('should throw an error', function () {
-            expect(() => csw()).to.throwException(err => {
-                expect(err.message).to.equal('URL is required!');
-            });
+            expect(() => csw()).to.throw('URL is required!');
         });
     });
 });
 
 describe('#generic request', function () {
     describe('Response with bad content-type', function () {
-        it('should emit an error', function (done) {
+        it('should emit an error', function () {
             nock('http://test-client')
                 .get('/csw')
                 .query({ service: 'CSW', version: '2.0.2', request: 'GetCapabilities' })
                 .reply(200, { 'Content-Type': 'text/html' });
 
-            collectStream(csw('http://test-client/csw').getCapabilities(), function (err) {
-                expect(err).to.be.an(Error);
-                expect(err.message).to.equal('Not an XML response');
-                done();
-            });
+            return expect(collectStream(csw('http://test-client/csw').getCapabilities())).to.eventually
+                .be.rejectedWith('Not an XML response')
+                .and.be.an.instanceOf(Error);
         });
     });
     describe('Response with status code = 400', function () {
-        it('should emit an error', function (done) {
+        it('should emit an error', function () {
             nock('http://test-client')
                 .get('/csw')
                 .query({ service: 'CSW', version: '2.0.2', request: 'GetCapabilities' })
                 .reply(400, '', { 'Content-Type': 'application/xml' });
 
-            collectStream(csw('http://test-client/csw').getCapabilities(), function (err) {
-                expect(err).to.be.an(Error);
-                expect(err.message).to.equal('Responded with an error status code: 400');
-                done();
-            });
+            return expect(collectStream(csw('http://test-client/csw').getCapabilities())).to.eventually
+                .be.rejectedWith('Responded with an error status code: 400')
+                .and.be.an.instanceOf(Error);
         });
     });
 });
@@ -68,22 +68,16 @@ describe('#capabilities', function () {
                 .reply(200, content, { 'Content-Type': 'application/xml;charset=UTF-8' });
         }
 
-        it('getCapabilities() should return a stream with valid content', function (done) {
+        it('getCapabilities() should return a stream with valid content', function () {
             hiNock();
-            collectStream(csw('http://test-client/csw').getCapabilities(), function (err, response) {
-                expect(err).to.be(null);
-                expect(response).to.be.eql(content);
-                done();
-            });
+            return expect(collectStream(csw('http://test-client/csw').getCapabilities())).to.eventually
+                .become(content);
         });
 
-        it('capabilities() should return capabilities', function (done) {
+        it('capabilities() should return capabilities', function () {
             hiNock();
-            csw('http://test-client/csw').capabilities((err, capabilities) => {
-                expect(err).to.be(null);
-                expect(capabilities.serviceIdentification.title).to.be('GéoPicardie catalog');
-                done();
-            });
+            return expect(csw('http://test-client/csw').capabilities()).to.eventually
+                .have.deep.property('serviceIdentification.title', 'GéoPicardie catalog');
         });
     });
 
@@ -96,22 +90,16 @@ describe('#capabilities', function () {
                 .reply(200, content, { 'Content-Type': 'application/xml;charset=UTF-8' });
         }
 
-        it('getCapabilities() should return a stream with valid content', function (done) {
+        it('getCapabilities() should return a stream with valid content', function () {
             hiNock();
-            collectStream(csw('http://test-client/csw').getCapabilities(), function (err, response) {
-                expect(err).to.be(null);
-                expect(response).to.be.eql(content);
-                done();
-            });
+            return expect(collectStream(csw('http://test-client/csw').getCapabilities())).to.eventually
+                .become(content);
         });
 
-        it('capabilities should return truncated capabilities', function (done) {
+        it('capabilities should return truncated capabilities', function () {
             hiNock();
-            csw('http://test-client/csw').capabilities((err, capabilities) => {
-                expect(err).to.be(null);
-                expect(capabilities.serviceIdentification.title).to.be('GéoPicar');
-                done();
-            });
+            return expect(csw('http://test-client/csw').capabilities()).to.eventually
+                .have.deep.property('serviceIdentification.title', 'GéoPicar');
         });
     });
 });
@@ -134,24 +122,17 @@ describe('#records', function () {
                 .reply(200, content, { 'Content-Type': 'application/xml;charset=UTF-8' });
         }
 
-        it('getRecords() should return a stream with valid content', function (done) {
+        it('getRecords() should return a stream with valid content', function () {
             hiNock();
-            collectStream(csw('http://test-client/csw').getRecords(), function (err, response) {
-                expect(err).to.be(null);
-                expect(response).to.be.eql(content);
-                done();
-            });
+            return expect(collectStream(csw('http://test-client/csw').getRecords())).to.eventually
+                .become(content);
         });
 
-        it('records() should return records', function (done) {
+        it('records() should return records', function () {
             hiNock();
-            csw('http://test-client/csw').records((err, result) => {
-                expect(err).to.be(null);
-                expect(result.returned).to.be(10);
-                expect(result.matched).to.be(965);
-                expect(result.records.length).to.be(10);
-                done();
-            });
+            return expect(csw('http://test-client/csw').records()).to.eventually
+              .include({ returned: 10, matched: 965 })
+              .and.have.deep.property('records.length', 10);
         });
     });
 });
@@ -174,13 +155,10 @@ describe('#count', function () {
                 .reply(200, content, { 'Content-Type': 'application/xml;charset=UTF-8' });
         }
 
-        it('count() should return records count', function (done) {
+        it('count() should return records count', function () {
             hiNock();
-            csw('http://test-client/csw').count((err, count) => {
-                expect(err).to.be(null);
-                expect(count).to.be(965);
-                done();
-            });
+            return expect(csw('http://test-client/csw').count()).to.eventually
+                .become(965);
         });
     });
 });

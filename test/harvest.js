@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 const nock = require('nock');
 const fs = require('fs');
-const expect = require('expect.js');
+const expect = require('chai').expect;
 const csw = require('../');
 
 describe('Harvester', function () {
@@ -35,7 +35,7 @@ describe('Harvester', function () {
                 .reply(200, content, { 'Content-Type': 'application/xml;charset=UTF-8' });
             const harvester = csw('http://test-client/csw').harvest({ step: 10 });
             harvester.on('end', () => {
-                expect(harvester.returned).to.be(10);
+                expect(harvester.returned).to.equal(10);
                 done();
             });
             harvester.resume();
