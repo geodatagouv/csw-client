@@ -430,13 +430,9 @@ es6-weak-map@^2.0.1:
     es6-iterator "2"
     es6-symbol "3"
 
-escape-string-regexp@1.0.5, escape-string-regexp@^1.0.5:
+escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
-
-escape-string-regexp@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.2.tgz#4dbc2fe674e71949caf3fb2695ce7f2dc1d9a8d1"
 
 escodegen@1.8.x:
   version "1.8.1"
@@ -770,9 +766,9 @@ inquirer@^0.12.0:
     strip-ansi "^3.0.0"
     through "^2.3.6"
 
-inspire-parser@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/inspire-parser/-/inspire-parser-0.8.0.tgz#4d95429117f95af6da1268bc83658004bfdc02a2"
+inspire-parser@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/inspire-parser/-/inspire-parser-0.10.0.tgz#4756ec14bf482ecaa6f72a7e883d80aecc2ac21a"
   dependencies:
     htmlparser2 "^3.9.1"
     is-plain-obj "^1.1.0"
