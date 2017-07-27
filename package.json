@@ -36,12 +36,12 @@
     "stringstream": "0.0.5"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-as-promised": "^6.0.0",
-    "eslint": "^3.0.1",
+    "chai": "^4.1.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^4.3.0",
     "istanbul": "^0.4.1",
     "mocha": "^3.2.0",
-    "nock": "^8.0.0"
+    "nock": "^9.0.14"
   },
   "engines": {
     "node": ">= 6.0"
