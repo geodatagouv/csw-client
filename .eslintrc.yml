@@ -2,19 +2,24 @@ env:
   es6: true
   node: true
 extends: 'eslint:recommended'
+parserOptions:
+  ecmaVersion: 8
 rules:
-  indent:
-    - error
-    - 4
   linebreak-style:
     - error
     - unix
   quotes:
     - error
     - single
+  indent:
+    - error
+    - 2
   semi:
     - error
-    - always
+    - never
+  comma-dangle:
+    - error
+    - always-multiline
   keyword-spacing:
     - error
   key-spacing:
@@ -43,8 +48,5 @@ rules:
     - error
   no-console:
     - error
-  comma-dangle:
-    - error
-    - always-multiline
   no-var:
     - error
