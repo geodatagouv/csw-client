@@ -79,7 +79,7 @@ describe('#capabilities', function () {
     it('capabilities() should return capabilities', function () {
       hiNock()
       return expect(csw('http://test-client/csw').capabilities()).to.eventually
-        .have.deep.property('serviceIdentification.title', 'GéoPicardie catalog')
+        .have.nested.property('serviceIdentification.title', 'GéoPicardie catalog')
     })
   })
 
@@ -98,10 +98,10 @@ describe('#capabilities', function () {
         .become(content)
     })
 
-    it('capabilities should return truncated capabilities', function () {
+    it('capabilities should throw an exception', function () {
       hiNock()
       return expect(csw('http://test-client/csw').capabilities()).to.eventually
-        .have.deep.property('serviceIdentification.title', 'GéoPicar')
+        .be.rejectedWith('Unclosed root tag')
     })
   })
 })
@@ -134,7 +134,7 @@ describe('#records', function () {
       hiNock()
       return expect(csw('http://test-client/csw').records()).to.eventually
         .include({ returned: 10, matched: 965 })
-        .and.have.deep.property('records.length', 10)
+        .and.have.nested.property('records.length', 10)
     })
   })
 })

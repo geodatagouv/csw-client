@@ -30,7 +30,7 @@
   "dependencies": {
     "bluebird": "^3.4.7",
     "debug": "^2.1.0",
-    "inspire-parser": "^0.12.0",
+    "inspire-parser": "^0.13.0",
     "lodash": "^4.0.0",
     "request": "^2.67.0",
     "stringstream": "0.0.5"
