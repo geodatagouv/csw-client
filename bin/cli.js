@@ -22,6 +22,7 @@ program
   .option('--inspire', 'Enable INSPIRE mode')
   .option('--log-all-requests', 'Log all requests')
   .option('--no-progress', 'Disable progress bar')
+  .option('-c, --concurrency [num]', 'Set concurrency [5]', 5)
   .action(function (location, options) {
     const client = csw(location, {})
     const harvestOptions = { defineConstraintLanguage: true }
@@ -31,6 +32,7 @@ program
       client.on('request', req => console.log(req.url.href))
     }
     if (options.inspire) harvestOptions.schema = 'inspire'
+    harvestOptions.concurrency = options.concurrency
 
     const harvester = client.harvest(harvestOptions)
 
