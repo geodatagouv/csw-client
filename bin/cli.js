@@ -21,6 +21,7 @@ program
   .description('harvest a CSW endpoint')
   .option('--inspire', 'Enable INSPIRE mode')
   .option('--log-all-requests', 'Log all requests')
+  .option('--no-progress', 'Disable progress bar')
   .action(function (location, options) {
     const client = csw(location, {})
     const harvestOptions = { defineConstraintLanguage: true }
@@ -38,14 +39,20 @@ program
         const count = harvester.matched
         console.log('Found %d records', count)
 
-        bar = new ProgressBar('  harvesting [:bar] :rate records/s :percent :etas', {
-          width: 40,
-          total: count,
-          complete: '=',
-          incomplete: ' ',
-        })
+        if (options.progress !== false) {
+          bar = new ProgressBar('  harvesting [:bar] :rate records/s :percent :etas', {
+            width: 40,
+            total: count,
+            complete: '=',
+            incomplete: ' ',
+          })
+        }
       })
-      .on('data', () => bar.tick())
+      .on('data', () => {
+        if (options.progress !== false) {
+          bar.tick()
+        }
+      })
       .on('error', console.error)
   })
 
