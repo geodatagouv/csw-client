@@ -29,7 +29,6 @@
   },
   "homepage": "https://github.com/sgmap-inspire/csw-client",
   "dependencies": {
-    "chalk": "^2.0.1",
     "commander": "^2.11.0",
     "debug": "^2.1.0",
     "inspire-parser": "^0.13.0",
