@@ -21,8 +21,8 @@ program
   .command('harvest <location>')
   .description('harvest a CSW endpoint')
   .option('--inspire', 'Enable INSPIRE mode')
+  .option('--display <mode>', 'Display modes: progress, list, none', 'progress')
   .option('--log-all-requests', 'Log all requests')
-  .option('--no-progress', 'Disable progress bar')
   .option('-c, --concurrency [num]', 'Set concurrency [5]', 5)
   .action(function (location, options) {
     const client = csw(location, {})
@@ -42,7 +42,7 @@ program
         const count = harvester.matched
         console.log('Found %d records', count)
 
-        if (options.progress !== false) {
+        if (options.display === 'progress') {
           bar = new ProgressBar('  harvesting [:bar] :rate records/s :percent :etas', {
             width: 40,
             total: count,
@@ -51,9 +51,12 @@ program
           })
         }
       })
-      .on('data', () => {
-        if (options.progress !== false) {
+      .on('data', record => {
+        if (options.display === 'progress') {
           bar.tick()
+        }
+        if (options.display === 'list') {
+          console.log(record.title)
         }
       })
       .on('error', console.error)
