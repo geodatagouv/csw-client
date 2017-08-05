@@ -43,7 +43,6 @@ const client = csw('http://your-csw-server.tld/csw', options);
 | `timeout`      | requests will fail after X seconds | `integer` | _disabled_ |
 | `agentOptions` | options to pass to [http.Agent](https://nodejs.org/api/http.html#http_new_agent_options) (or https) constructor | `object` | _none_ |
 | `appendQs`     | query string to append to each request (key/value object) | `object` | _none_ |
-| `encodeQs`     | encode query string | `boolean` | `true` |
 
 ### Harvest
 
