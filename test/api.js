@@ -5,7 +5,6 @@ const nock = require('nock')
 const fs = require('fs')
 const csw = require('../')
 const stringstream = require('stringstream')
-const Promise = require('bluebird')
 
 const chai = require('chai')
 const expect = chai.expect
