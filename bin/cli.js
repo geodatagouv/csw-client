@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint no-console: off */
 const program = require('commander')
 const ProgressBar = require('progress')
 const pkg = require('../package.json')
