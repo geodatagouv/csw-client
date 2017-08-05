@@ -25,7 +25,7 @@ program
   .option('-c, --concurrency [num]', 'Set concurrency [5]', 5)
   .action(function (location, options) {
     const client = csw(location, {})
-    const harvestOptions = { defineConstraintLanguage: true }
+    const harvestOptions = {}
     let bar
 
     if (options.logAllRequests) {
