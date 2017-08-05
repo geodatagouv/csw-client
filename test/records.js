@@ -1,7 +1,6 @@
 'use strict'
 
 /* eslint-env mocha */
-/* eslint indent: ['error', 2] */
 const chai = require('chai')
 const expect = chai.expect
 const { withSummary } = require('../lib/records')

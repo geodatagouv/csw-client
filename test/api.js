@@ -11,17 +11,18 @@ const expect = chai.expect
 const chaiAsPromised = require('chai-as-promised')
 chai.use(chaiAsPromised)
 
-function collectStream(readablePromise) {
-  return readablePromise
-    .then(readable => new Promise((resolve, reject) => {
-      const buffer = []
-      readable
-        .on('error', reject)
-        .pipe(stringstream('utf8'))
-        .on('error', reject)
-        .on('data', chunk => buffer.push(chunk))
-        .on('end', () => resolve(buffer.join()))
-    }))
+async function collectStream(readablePromise) {
+  const readable = await readablePromise
+
+  return new Promise((resolve, reject) => {
+    const buffer = []
+    readable
+      .on('error', reject)
+      .pipe(stringstream('utf8'))
+      .on('error', reject)
+      .on('data', chunk => buffer.push(chunk))
+      .on('end', () => resolve(buffer.join()))
+  })
 }
 
 describe('#constructor', function () {
