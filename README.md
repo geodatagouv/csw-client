@@ -9,7 +9,6 @@ A very simple CSW client
 ## Prerequisite
 
 * [Node.js](https://nodejs.org) >= 8.0
-* OR [Babel](https://babeljs.io/) for older Node.js versions + browser
 
 ## Features
 

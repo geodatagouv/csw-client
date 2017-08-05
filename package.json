@@ -1,6 +1,6 @@
 {
   "name": "csw-client",
-  "version": "0.9.0",
+  "version": "0.11.0",
   "description": "A very simple CSW client",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "bin": "./bin/cli.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sgmap-inspire/csw-client.git"
+    "url": "git://github.com/inspireteam/csw-client.git"
   },
   "keywords": [
     "CSW",
@@ -25,9 +25,9 @@
   "author": "Jérôme Desboeufs <jerome.desboeufs@data.gouv.fr>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sgmap-inspire/csw-client/issues"
+    "url": "https://github.com/inspireteam/csw-client/issues"
   },
-  "homepage": "https://github.com/sgmap-inspire/csw-client",
+  "homepage": "https://github.com/inspireteam/csw-client",
   "dependencies": {
     "commander": "^2.11.0",
     "debug": "^2.1.0",
@@ -46,6 +46,6 @@
     "nock": "^9.0.14"
   },
   "engines": {
-    "node": ">= 6.0"
+    "node": ">= 8.0"
   }
 }
