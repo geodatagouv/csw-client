@@ -52,11 +52,13 @@ program
         }
       })
       .on('data', record => {
-        if (options.display === 'progress') {
-          bar.tick()
-        }
         if (options.display === 'list') {
           console.log(record.title)
+        }
+      })
+      .on('progress', progression => {
+        if (options.display === 'progress') {
+          bar.tick(progression)
         }
       })
       .on('error', console.error)
