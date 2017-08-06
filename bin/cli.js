@@ -23,7 +23,7 @@ program
   .option('--inspire', 'Enable INSPIRE mode')
   .option('--display <mode>', 'Display modes: progress, list, none', 'progress')
   .option('--log-all-requests', 'Log all requests')
-  .option('-c, --concurrency [num]', 'Set concurrency [5]', 5)
+  .option('-c, --concurrency [num]', 'Set concurrency [2]', 2)
   .action(function (location, options) {
     const client = csw(location, {})
     const harvestOptions = {}
