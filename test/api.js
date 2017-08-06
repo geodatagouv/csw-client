@@ -28,7 +28,7 @@ async function collectStream(readablePromise) {
 describe('#constructor', function () {
   describe('New client without url', function () {
     it('should throw an error', function () {
-      expect(() => csw()).to.throw('URL is required!')
+      expect(() => csw()).to.throw('serviceUrl is required!')
     })
   })
 })
