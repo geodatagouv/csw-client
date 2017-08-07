@@ -20,7 +20,7 @@ program
 program
   .command('harvest <location>')
   .description('harvest a CSW endpoint')
-  .option('--inspire', 'Enable INSPIRE mode')
+  .option('--schema <schema>', 'Schema in which records must be returned: dc, iso, both', 'dc')
   .option('--display <mode>', 'Display modes: progress, list, none', 'progress')
   .option('--log-all-requests', 'Log all requests')
   .option('-c, --concurrency [num]', 'Set concurrency [2]', 2)
@@ -32,14 +32,14 @@ program
     if (options.logAllRequests) {
       client.on('request', req => console.log(req.url.href))
     }
-    if (options.inspire) harvestOptions.schema = 'inspire'
+    harvestOptions.schema = options.schema
     harvestOptions.concurrency = options.concurrency
 
     const harvester = client.harvest(harvestOptions)
 
     harvester
       .on('started', () => {
-        const count = harvester.matched
+        const count = harvester.total
         if (options.display === 'progress') {
           bar = new ProgressBar('  harvesting [:bar] :current/:total (:percent) - :rate records/s - ETA: :etas', {
             width: 40,
