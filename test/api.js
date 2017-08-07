@@ -119,7 +119,8 @@ describe('#records', function () {
           resultType: 'results',
           elementSetName: 'full',
           typeNames: 'csw:Record',
-          maxRecords: 10,
+          outputSchema: 'http://www.opengis.net/cat/csw/2.0.2',
+          maxRecords: 20,
         })
         .reply(200, content, { 'Content-Type': 'application/xml;charset=UTF-8' })
     }
@@ -152,7 +153,8 @@ describe('#count', function () {
           resultType: 'hits',
           elementSetName: 'full',
           typeNames: 'csw:Record',
-          maxRecords: 10,
+          outputSchema: 'http://www.opengis.net/cat/csw/2.0.2',
+          maxRecords: 20,
         })
         .reply(200, content, { 'Content-Type': 'application/xml;charset=UTF-8' })
     }
