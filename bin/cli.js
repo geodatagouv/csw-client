@@ -51,6 +51,9 @@ program
           })
         }
       })
+      .on('finished', () => {
+        console.log(JSON.stringify(harvester, true, 2))
+      })
       .on('data', record => {
         if (options.display === 'list') {
           console.log(record.title)
