@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint lib test *.js",
-    "test-unit": "istanbul cover _mocha",
+    "test-unit": "nyc mocha",
     "test": "npm run lint && npm run test-unit"
   },
   "files": [
@@ -43,9 +43,9 @@
     "chai": "^4.1.0",
     "chai-as-promised": "^7.1.1",
     "eslint": "^4.3.0",
-    "istanbul": "^0.4.1",
     "mocha": "^3.2.0",
-    "nock": "^9.0.14"
+    "nock": "^9.0.14",
+    "nyc": "^11.1.0"
   },
   "engines": {
     "node": ">= 8.0"
