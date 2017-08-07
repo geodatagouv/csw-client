@@ -46,6 +46,7 @@ program
             total: count,
             complete: '=',
             incomplete: ' ',
+            clear: true,
           })
         }
       })
