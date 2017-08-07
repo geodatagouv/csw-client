@@ -40,10 +40,8 @@ program
     harvester
       .on('started', () => {
         const count = harvester.matched
-        console.log('Found %d records', count)
-
         if (options.display === 'progress') {
-          bar = new ProgressBar('  harvesting [:bar] :rate records/s :percent :etas', {
+          bar = new ProgressBar('  harvesting [:bar] :current/:total (:percent) - :rate records/s - ETA: :etas', {
             width: 40,
             total: count,
             complete: '=',
