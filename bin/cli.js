@@ -23,7 +23,9 @@ program
   .option('--schema <schema>', 'Schema in which records must be returned: dc, iso, both', 'dc')
   .option('--display <mode>', 'Display modes: progress, list, none', 'progress')
   .option('--log-all-requests', 'Log all requests')
-  .option('-c, --concurrency [num]', 'Set concurrency [2]', 2)
+  .option('--concurrency [num]', 'Set concurrency [2]', parseInt, 2)
+  .option('--timeout [duration]', 'Harvester activity timeout, in ms [20000]', parseInt, 20000)
+  .option('--step [num]', 'Number of records fetched by request [20]', parseInt, 20)
   .action(function (location, options) {
     const client = csw(location, {})
     const harvestOptions = {}
@@ -34,6 +36,8 @@ program
     }
     harvestOptions.schema = options.schema
     harvestOptions.concurrency = options.concurrency
+    harvestOptions.step = options.step
+    harvestOptions.activityTimeout = options.timeout
 
     const harvester = client.harvest(harvestOptions)
 
