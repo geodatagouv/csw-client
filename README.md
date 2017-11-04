@@ -2,9 +2,9 @@
 A very simple CSW client
 
 [![npm version](https://img.shields.io/npm/v/csw-client.svg)](https://www.npmjs.com/package/csw-client)
-[![Circle CI](https://circleci.com/gh/sgmap-inspire/csw-client/tree/master.svg?style=shield)](https://circleci.com/gh/sgmap-inspire/csw-client/tree/master)
-[![Coverage Status](https://coveralls.io/repos/sgmap-inspire/csw-client/badge.svg?branch=master&service=github)](https://coveralls.io/github/sgmap-inspire/csw-client?branch=master)
-[![Dependency Status](https://david-dm.org/sgmap-inspire/csw-client.svg)](https://david-dm.org/sgmap-inspire/csw-client)
+[![Circle CI](https://circleci.com/gh/inspireteam/csw-client/tree/master.svg?style=shield)](https://circleci.com/gh/inspireteam/csw-client/tree/master)
+[![Coverage Status](https://coveralls.io/repos/inspireteam/csw-client/badge.svg?branch=master&service=github)](https://coveralls.io/github/inspireteam/csw-client?branch=master)
+[![Dependency Status](https://david-dm.org/inspireteam/csw-client.svg)](https://david-dm.org/inspireteam/csw-client)
 
 ## Prerequisite
 
