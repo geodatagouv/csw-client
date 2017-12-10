@@ -1,6 +1,6 @@
 {
   "name": "csw-client",
-  "version": "0.15.0",
+  "version": "0.15.1",
   "description": "A very simple CSW client",
   "main": "index.js",
   "scripts": {
