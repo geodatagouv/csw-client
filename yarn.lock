@@ -1578,9 +1578,9 @@ inquirer@^3.0.6:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-inspire-parser@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/inspire-parser/-/inspire-parser-0.14.0.tgz#d7a27243a053d747552d83884d570839a253106f"
+inspire-parser@^0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/inspire-parser/-/inspire-parser-0.15.0.tgz#7076389c7d4fc68adfdb2470b194b1423b3b5327"
   dependencies:
     is-plain-obj "^1.1.0"
     once "^1.3.3"

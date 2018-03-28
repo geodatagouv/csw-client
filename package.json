@@ -32,7 +32,7 @@
   "dependencies": {
     "commander": "^2.11.0",
     "debug": "^3.1.0",
-    "inspire-parser": "^0.14.0",
+    "inspire-parser": "^0.15.0",
     "lodash": "^4.0.0",
     "mississippi": "^3.0.0",
     "progress": "^2.0.0",
