@@ -1,16 +1,17 @@
 'use strict'
 
 /* eslint-env mocha */
-const nock = require('nock')
 const fs = require('fs')
-const expect = require('chai').expect
-const csw = require('../')
+const {join} = require('path')
+const nock = require('nock')
+const {expect} = require('chai')
+const csw = require('..')
 
-describe('Harvester', function () {
-  describe('When all records are in a single page', function () {
-    const content = fs.readFileSync(__dirname + '/fixtures/harvest-records-onepage.xml', 'utf8')
+describe('Harvester', () => {
+  describe('When all records are in a single page', () => {
+    const content = fs.readFileSync(join(__dirname, 'fixtures', 'harvest-records-onepage.xml'), 'utf8')
 
-    it('should harvest with success', function (done) {
+    it('should harvest with success', done => {
       nock('http://test-client')
         .get('/csw')
         .query({
@@ -21,9 +22,9 @@ describe('Harvester', function () {
           elementSetName: 'full',
           typeNames: 'csw:Record',
           outputSchema: 'http://www.opengis.net/cat/csw/2.0.2',
-          maxRecords: 20,
+          maxRecords: 20
         })
-        .reply(200, content, { 'Content-Type': 'application/xml;charset=UTF-8' })
+        .reply(200, content, {'Content-Type': 'application/xml;charset=UTF-8'})
         .get('/csw')
         .query({
           service: 'CSW',
@@ -34,10 +35,10 @@ describe('Harvester', function () {
           typeNames: 'csw:Record',
           outputSchema: 'http://www.opengis.net/cat/csw/2.0.2',
           maxRecords: 10,
-          startPosition: 1,
+          startPosition: 1
         })
-        .reply(200, content, { 'Content-Type': 'application/xml;charset=UTF-8' })
-      const harvester = csw('http://test-client/csw').harvest({ step: 10 })
+        .reply(200, content, {'Content-Type': 'application/xml;charset=UTF-8'})
+      const harvester = csw('http://test-client/csw').harvest({step: 10})
       harvester.on('end', () => {
         expect(harvester.returned).to.equal(10)
         done()

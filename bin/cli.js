@@ -3,7 +3,7 @@
 const program = require('commander')
 const ProgressBar = require('progress')
 const pkg = require('../package.json')
-const csw = require('../')
+const csw = require('..')
 
 program
   .version(pkg.version)
@@ -11,9 +11,9 @@ program
 program
   .command('inspect <location>')
   .description('inspect a CSW endpoint')
-  .action(async function (location) {
+  .action(async location => {
     const client = csw(location, {})
-    const capabilities  = await client.capabilities()
+    const capabilities = await client.capabilities()
     console.log(capabilities)
   })
 
@@ -26,7 +26,7 @@ program
   .option('--concurrency [num]', 'Set concurrency [2]', parseInt, 2)
   .option('--timeout [duration]', 'Harvester activity timeout, in ms [20000]', parseInt, 20000)
   .option('--step [num]', 'Number of records fetched by request [20]', parseInt, 20)
-  .action(function (location, options) {
+  .action((location, options) => {
     const client = csw(location, {})
     const harvestOptions = {}
     let bar
@@ -50,7 +50,7 @@ program
             total: count,
             complete: '=',
             incomplete: ' ',
-            clear: true,
+            clear: true
           })
         }
       })

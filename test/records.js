@@ -2,19 +2,19 @@
 
 /* eslint-env mocha */
 const chai = require('chai')
-const expect = chai.expect
-const { withSummary } = require('../lib/records')
+
+const {expect} = chai
+const {withSummary} = require('../lib/records')
 
 describe('records#withSummary()', () => {
-
   describe('MD_Metadata', () => {
     it('should compute `id` and `title` properly', () => {
       const type = 'MD_Metadata'
       const body = {
         fileIdentifier: '12345',
-        identificationInfo: { citation: { title: 'Dataset #1' } },
+        identificationInfo: {citation: {title: 'Dataset #1'}}
       }
-      expect(withSummary({ type, body })).to.eql({ type, body, id: '12345', title: 'Dataset #1' })
+      expect(withSummary({type, body})).to.eql({type, body, id: '12345', title: 'Dataset #1'})
     })
   })
 
@@ -23,9 +23,9 @@ describe('records#withSummary()', () => {
       const type = 'Record'
       const body = {
         identifier: '5678944',
-        title: 'Dataset #2019',
+        title: 'Dataset #2019'
       }
-      expect(withSummary({ type, body })).to.eql({ type, body, id: '5678944', title: 'Dataset #2019' })
+      expect(withSummary({type, body})).to.eql({type, body, id: '5678944', title: 'Dataset #2019'})
     })
   })
 
@@ -34,9 +34,9 @@ describe('records#withSummary()', () => {
       const type = 'SummaryRecord'
       const body = {
         identifier: '5678559',
-        title: 'Dataset #2015',
+        title: 'Dataset #2015'
       }
-      expect(withSummary({ type, body })).to.eql({ type, body, id: '5678559', title: 'Dataset #2015' })
+      expect(withSummary({type, body})).to.eql({type, body, id: '5678559', title: 'Dataset #2015'})
     })
   })
 
@@ -45,9 +45,9 @@ describe('records#withSummary()', () => {
       const type = 'BriefRecord'
       const body = {
         identifier: '56789',
-        title: 'Dataset #201',
+        title: 'Dataset #201'
       }
-      expect(withSummary({ type, body })).to.eql({ type, body, id: '56789', title: 'Dataset #201' })
+      expect(withSummary({type, body})).to.eql({type, body, id: '56789', title: 'Dataset #201'})
     })
   })
 
@@ -56,9 +56,9 @@ describe('records#withSummary()', () => {
       const type = 'MD_Metadata'
       const body = {
         fileIdentifier: '12345',
-        identificationInfo: { citation: { title: 'Dataset #1' } },
+        identificationInfo: {citation: {title: 'Dataset #1'}}
       }
-      expect(withSummary({ type, body })).to.eql({ type, body, id: '12345', title: 'Dataset #1' })
+      expect(withSummary({type, body})).to.eql({type, body, id: '12345', title: 'Dataset #1'})
     })
   })
 
@@ -67,10 +67,9 @@ describe('records#withSummary()', () => {
       const type = 'FC_FeatureCatalogue'
       const body = {
         uuid: '00000',
-        name: 'Attribute catalog',
+        name: 'Attribute catalog'
       }
-      expect(withSummary({ type, body })).to.eql({ type, body, id: '00000', title: 'Attribute catalog' })
+      expect(withSummary({type, body})).to.eql({type, body, id: '00000', title: 'Attribute catalog'})
     })
   })
-
 })
