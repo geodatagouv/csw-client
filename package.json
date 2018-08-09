@@ -16,7 +16,7 @@
   "bin": "./bin/cli.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/inspireteam/csw-client.git"
+    "url": "git://github.com/geodatagouv/csw-client.git"
   },
   "keywords": [
     "CSW",
@@ -26,9 +26,9 @@
   "author": "Jérôme Desboeufs <jerome.desboeufs@data.gouv.fr>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/inspireteam/csw-client/issues"
+    "url": "https://github.com/geodatagouv/csw-client/issues"
   },
-  "homepage": "https://github.com/inspireteam/csw-client",
+  "homepage": "https://github.com/geodatagouv/csw-client",
   "dependencies": {
     "commander": "^2.11.0",
     "debug": "^3.1.0",
