@@ -2,9 +2,9 @@
 A very simple CSW client
 
 [![npm version](https://img.shields.io/npm/v/csw-client.svg)](https://www.npmjs.com/package/csw-client)
-[![Circle CI](https://circleci.com/gh/inspireteam/csw-client/tree/master.svg?style=shield)](https://circleci.com/gh/inspireteam/csw-client/tree/master)
-[![Coverage Status](https://coveralls.io/repos/inspireteam/csw-client/badge.svg?branch=master&service=github)](https://coveralls.io/github/inspireteam/csw-client?branch=master)
-[![Dependency Status](https://david-dm.org/inspireteam/csw-client.svg)](https://david-dm.org/inspireteam/csw-client)
+[![Circle CI](https://circleci.com/gh/geodatagouv/csw-client/tree/master.svg?style=shield)](https://circleci.com/gh/geodatagouv/csw-client/tree/master)
+[![Coverage Status](https://coveralls.io/repos/geodatagouv/csw-client/badge.svg?branch=master&service=github)](https://coveralls.io/github/geodatagouv/csw-client?branch=master)
+[![Dependency Status](https://david-dm.org/geodatagouv/csw-client.svg)](https://david-dm.org/geodatagouv/csw-client)
 
 ## Prerequisite
 
