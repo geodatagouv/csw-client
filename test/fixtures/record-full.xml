@@ -1,0 +1,48 @@
+<csw:GetRecordByIdResponse xmlns:csw="http://www.opengis.net/cat/csw/2.0.2">
+<csw:Record xmlns:geonet="http://www.fao.org/geonetwork" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ows="http://www.opengis.net/ows" xmlns:dct="http://purl.org/dc/terms/">
+<dc:identifier>REF_ALT_CourbesNiveau50cm</dc:identifier>
+<dc:date>2011-09-01</dc:date>
+<dc:title>
+Brest métropole : Courbes de niveau de 50cm en 50cm
+</dc:title>
+<dc:type>dataset</dc:type>
+<dc:subject>Altitude</dc:subject>
+<dc:subject>Altitudes</dc:subject>
+<dc:subject>reliefs</dc:subject>
+<dc:subject>niveaux</dc:subject>
+<dc:subject>hauteurs</dc:subject>
+<dc:subject>élévations</dc:subject>
+<dc:subject>mnt</dc:subject>
+<dc:subject>open data</dc:subject>
+<dc:subject>référentiels : altitude</dc:subject>
+<dc:subject>Altitude</dc:subject>
+<dc:subject>elevation</dc:subject>
+<dc:format>ESRI Shapefile</dc:format>
+<dct:modified>2011-09-01</dct:modified>
+<dct:abstract>
+Informations calculées à partir du modèle numérique de terrain, lui-même basé sur la photographie aérienne 2010 sur Bmo. Les valeurs d'altitude sont d'une précision approximative de 50 cm. Elles sont calculées de façon automatique en se basant sur la superposition des clichés en chaque point du territoire espacés de 10 m. Une interpolation permet ensuite d'obtenir une valeur tout les mètres. Ces données seront améliorées par le travail en cours.
+</dct:abstract>
+<dc:description>
+Informations calculées à partir du modèle numérique de terrain, lui-même basé sur la photographie aérienne 2010 sur Bmo. Les valeurs d'altitude sont d'une précision approximative de 50 cm. Elles sont calculées de façon automatique en se basant sur la superposition des clichés en chaque point du territoire espacés de 10 m. Une interpolation permet ensuite d'obtenir une valeur tout les mètres. Ces données seront améliorées par le travail en cours.
+</dc:description>
+<dc:rights>otherRestrictions</dc:rights>
+<dc:language>fre</dc:language>
+<dc:source>
+Sept 2011 Création après acquisition MNT suite à photo aérienne 2010 Janv 2017 Ajout du champ Elevation pour que le Z soit récupéré dans Autocad (export DWG)
+</dc:source>
+<dc:format>ESRI Shapefile</dc:format>
+<ows:BoundingBox crs="urn:ogc:def:crs:urn:ogc:def:crs:EPSG:6.11::RGF93 / Lambert-93 (EPSG:2154)">
+<ows:LowerCorner>-4.0685 48.1289</ows:LowerCorner>
+<ows:UpperCorner>-5.0337 48.8512</ows:UpperCorner>
+</ows:BoundingBox>
+<dc:URI protocol="OGC:WMS" name="2" description="Brest métropole : Courbes de niveau de 50cm en 50cm">
+https://geo.brest-metropole.fr/arcgis/services/public/GPB_REF/MapServer/WMSServer
+</dc:URI>
+<dc:URI protocol="WWW:DOWNLOAD-1.0-http--download" name="REF_ALT_CourbesNiveau50cm" description="Brest métropole : Courbes de niveau de 50cm en 50cm">
+https://applications002.brest-metropole.fr/VIPDU72/GPB/REF_ALT_CourbesNiveau50cm.zip
+</dc:URI>
+<dc:URI protocol="image/jpeg" name="thumbnail">
+https://applications002.brest-metropole.fr/VIPDU72/INSPIRE/REF_ALT_CourbesNiveau50cm.jpg
+</dc:URI>
+</csw:Record>
+</csw:GetRecordByIdResponse>

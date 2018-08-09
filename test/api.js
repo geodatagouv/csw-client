@@ -169,3 +169,52 @@ describe('#count', () => {
     })
   })
 })
+
+describe('#record', () => {
+  describe('Asking for a known metadata id', () => {
+    const content = fs.readFileSync(join(__dirname, 'fixtures', 'record-full.xml'), 'utf8')
+    function hiNock() {
+      nock('http://test-client')
+        .get('/csw')
+        .query({
+          service: 'CSW',
+          version: '2.0.2',
+          request: 'GetRecordById',
+          elementSetName: 'full',
+          typeNames: 'csw:Record',
+          outputSchema: 'http://www.opengis.net/cat/csw/2.0.2',
+          id: 'REF_ALT_CourbesNiveau50cm'
+        })
+        .reply(200, content, {'Content-Type': 'application/xml;charset=UTF-8'})
+    }
+
+    it('record() should return a valid full csw:Record', () => {
+      hiNock()
+      return expect(csw('http://test-client/csw').record('REF_ALT_CourbesNiveau50cm')).to.eventually
+        .have.property('title', 'Brest métropole : Courbes de niveau de 50cm en 50cm')
+    })
+  })
+
+  describe('Asking for an unknown metadata id', () => {
+    const content = fs.readFileSync(join(__dirname, 'fixtures', 'record-empty.xml'), 'utf8')
+    function hiNock() {
+      nock('http://test-client')
+        .get('/csw')
+        .query({
+          service: 'CSW',
+          version: '2.0.2',
+          request: 'GetRecordById',
+          elementSetName: 'full',
+          typeNames: 'csw:Record',
+          outputSchema: 'http://www.opengis.net/cat/csw/2.0.2',
+          id: 'unknown_id'
+        })
+        .reply(200, content, {'Content-Type': 'application/xml;charset=UTF-8'})
+    }
+
+    it('record() should return a valid full csw:Record', () => {
+      hiNock()
+      return expect(csw('http://test-client/csw').record('unknown_id')).to.become(null)
+    })
+  })
+})
