@@ -2,6 +2,7 @@
 /* eslint no-console: off */
 const program = require('commander')
 const ProgressBar = require('progress')
+const chalk = require('chalk')
 const pkg = require('../package.json')
 const csw = require('..')
 
@@ -59,7 +60,7 @@ program
       })
       .on('data', record => {
         if (options.display === 'list') {
-          console.log(record.title)
+          console.log(`${chalk.yellow(record.hash.substr(0, 7))} ${record.title}`)
         }
       })
       .on('progress', progression => {
