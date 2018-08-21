@@ -6,6 +6,12 @@ const chalk = require('chalk')
 const pkg = require('../package.json')
 const csw = require('..')
 
+const STATUS_DISPLAY = {
+  new: chalk.green('new'),
+  updated: chalk.yellow('updated'),
+  hit: chalk.gray('hit')
+}
+
 program
   .version(pkg.version)
 
@@ -60,7 +66,7 @@ program
       })
       .on('data', record => {
         if (options.display === 'list') {
-          console.log(`${chalk.yellow(record.hash.substr(0, 7))} ${record.title}`)
+          console.log(`${chalk.yellow(record.hash.substr(0, 7))} (${STATUS_DISPLAY[record.status]}) ${record.title}`)
         }
       })
       .on('progress', progression => {
