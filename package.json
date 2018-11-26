@@ -27,6 +27,9 @@
   "bugs": {
     "url": "https://github.com/geodatagouv/csw-client/issues"
   },
+  "engines": {
+    "node": ">= 8.0"
+  },
   "homepage": "https://github.com/geodatagouv/csw-client",
   "dependencies": {
     "bluebird": "^3.5.1",
@@ -43,19 +46,23 @@
     "stringstream": "^0.0.6"
   },
   "devDependencies": {
-    "chai": "^4.1.0",
+    "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "codecov": "^3.1.0",
     "mocha": "^5.2.0",
-    "nock": "^9.6.0",
-    "nyc": "^12.0.2",
+    "nock": "^10.0.2",
+    "nyc": "^13.1.0",
     "xo": "^0.22.0"
   },
   "xo": {
     "semicolon": false,
     "space": 2
   },
-  "engines": {
-    "node": ">= 8.0"
+  "nyc": {
+    "all": true,
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
   }
 }
