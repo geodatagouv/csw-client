@@ -1,10 +1,11 @@
-# csw-client
-A very simple CSW client
+# csw-client [![CircleCI](https://circleci.com/gh/geodatagouv/csw-client.svg?style=svg)](https://circleci.com/gh/geodatagouv/csw-client)
 
-[![npm version](https://img.shields.io/npm/v/csw-client.svg)](https://www.npmjs.com/package/csw-client)
-[![Circle CI](https://circleci.com/gh/geodatagouv/csw-client/tree/master.svg?style=shield)](https://circleci.com/gh/geodatagouv/csw-client/tree/master)
-[![Coverage Status](https://coveralls.io/repos/geodatagouv/csw-client/badge.svg?branch=master&service=github)](https://coveralls.io/github/geodatagouv/csw-client?branch=master)
-[![Dependency Status](https://david-dm.org/geodatagouv/csw-client.svg)](https://david-dm.org/geodatagouv/csw-client)
+> A very simple CSW client
+
+[![npm version](https://badgen.net/npm/v/csw-client)](https://www.npmjs.com/package/csw-client)
+[![dependencies Status](https://badgen.net/david/dep/geodatagouv/csw-client)](https://david-dm.org/geodatagouv/csw-client)
+[![codecov](https://badgen.net/codecov/c/github/geodatagouv/csw-client)](https://codecov.io/gh/geodatagouv/csw-client)
+[![XO code style](https://badgen.net/badge/code%20style/XO/cyan)](https://github.com/xojs/xo)
 
 ## Prerequisite
 
